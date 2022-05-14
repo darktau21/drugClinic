@@ -1,0 +1,27 @@
+.socials
+  display: flex
+  align-items: center
+  &__link
+    display: block
+    padding: 0 7px
+  &__img
+    width: 35px
+    height: 35px
+    vertical-align: bottom
+    transition: 0.3s
+    & rect
+      fill: #F1F5FF
+      transition: inherit
+    & path
+      fill: #2770f1
+      transition: inherit
+    &:hover
+      & rect
+        fill: #2770f1
+      & path
+        fill: #F1F5FF
+    &:active
+      & rect
+        fill: darken(#2770f1, 10)
+      & path
+        fill: darken(#F1F5FF, 10)

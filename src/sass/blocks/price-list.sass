@@ -1,0 +1,32 @@
+.price-list
+  &__title
+    color: #1B315F
+    font-weight: 800
+    margin: 15px 0
+  &__item
+    transition: 0.3s
+    &:hover
+      box-shadow: 0px 4px 24px rgba(27, 49, 95, 0.15)
+      border-radius: 4px
+  &__link
+    color: #2770F1
+    font-weight: 500
+    display: flex
+    padding: 12px
+    justify-content: space-between
+    gap: 15px
+    align-items: center
+    @media screen and ( max-width: 1070px )
+      gap: 5px
+      padding: 3px
+  &__price
+    color: #1B315F
+    justify-self: flex-end
+    @media screen and ( max-width: 1070px )
+      flex: 1 0 auto
+  &__div-line
+    background-color: #D7E2FF
+    height: 1px
+    flex: 1 0 auto
+    @media screen and ( max-width: 1070px )
+      flex: 2 1 100%

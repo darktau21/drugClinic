@@ -1,0 +1,17 @@
+.list
+  list-style: disc
+  padding-left: 50px
+  @media screen and ( max-width: 1070px )
+    padding-left: 20px
+  &__item
+    color: #3F578B
+    font-weight: 400
+    font-size: 18px
+    padding: 7px 0
+    list-style: inherit
+    &::marker
+      color: #1EBB92
+    @media screen and ( max-width: 1070px )
+      font-size: 16px
+    &_bold
+      font-weight: 500

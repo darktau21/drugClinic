@@ -1,0 +1,50 @@
+.steps-list
+  display: flex
+  align-items: stretch
+  justify-content: flex-start
+  align-content: flex-start
+  align-self: center
+  gap: 2%
+  flex-wrap: wrap
+  @media screen and ( max-width: 1070px )
+    justify-content: space-between
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    justify-content: flex-start
+    background-color: #ffffff
+    box-shadow: 0px 4px 24px rgba(27, 49, 95, 0.15)
+    border-radius: 56px 4px 4px 4px
+    padding: 15px
+    gap: 15px
+    flex: 0 1 270px
+    margin-bottom: 30px
+    @media screen and ( max-width: 1070px )
+      flex: 0 1 140px
+      padding: 8px
+      gap: 5px
+    @media screen and ( max-width: 400px )
+      flex: 1 5 120px
+  &__num
+    background-color: #2770F1
+    text-align: center
+    vertical-align: middle
+    width: 70px
+    height: 70px
+    line-height: 70px
+    color: #ffffff
+    border-radius: 50%
+    border-bottom-left-radius: 0
+    font-size: 36px
+    margin-left: 10px
+    @media screen and ( max-width: 1070px )
+      width: 40px
+      height: 40px
+      font-size: 24px
+      line-height: 40px
+  &__desc
+    color: #1B315F
+    font-weight: 500
+    @media screen and ( max-width: 1070px )
+      font-size: 14px

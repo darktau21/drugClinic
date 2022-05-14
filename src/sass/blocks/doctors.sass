@@ -1,0 +1,42 @@
+.doctors
+  background-color: #162D5F
+  display: flex
+  flex-direction: column
+  padding: 50px 0
+  @media screen and ( max-width: 1070px )
+    padding: 25px 0
+  &__window
+    align-items: stretch
+  &__card
+    flex: 1 0 auto
+    @media screen and ( max-width: 1070px )
+      flex: 1 0 40%
+    @media screen and ( max-width: 545px )
+      flex: 1 0 55%
+    @media screen and ( max-width: 375px )
+      flex: 1 0 85%
+  &__title
+    margin-bottom: 40px
+    @media screen and ( max-width: 1070px )
+      margin-bottom: 15px
+  &__load-btn
+    padding: 10px 15px
+    vertical-align: middle
+    align-self: center
+    margin-top: 40px
+    @media screen and ( max-width: 1070px )
+      align-self: stretch
+      margin: 0 3%
+      margin-top: 15px
+    &::after
+      width: 15px
+      height: 18px
+      content: ""
+      display: inline-block
+      background-image: url("./img/mouse-icon.svg")
+      background-repeat: no-repeat
+      background-position: top
+      background-size: cover
+      position: static
+      margin-bottom: -4px
+      margin-left: 10px

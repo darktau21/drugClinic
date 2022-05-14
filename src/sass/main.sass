@@ -1,0 +1,73 @@
+@import 'utils/*.sass'
+@import 'blocks/*.sass'
+
+html
+  scroll-behavior: smooth
+  height: 100%
+
+body
+  margin: 0
+  padding: 0
+  border: none
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-size: 1rem
+  color: #3F578B
+  min-width: 320px
+  box-sizing: border-box
+  position: relative
+  overflow-x: hidden
+  height: 100%
+
+.wrapper
+  background-color: #FFFFFF
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.container
+  padding:
+    left: 3%
+    right: 3%
+
+.border-container
+  border:
+      right: 1px solid #D7E2FF
+      left: 1px solid #D7E2FF
+  @media screen and ( max-width: 1070px )
+      border: none
+*,
+::after,
+::before
+  padding: 0
+  margin: 0
+  border: 0
+
+main
+  flex: 1 1 auto
+
+a
+  text-decoration: none
+
+li,
+ol,
+ul
+  list-style: none
+
+img
+  vertical-align: top
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  padding: 0
+  margin: 0
+  font-weight: normal
+  font-size: 24px
+
+// Стили для выделенных объектов (цвет и фон выделения для текста)
+::selection
+  background-color: lighten(#162D5F, 20)
+  color: #fff

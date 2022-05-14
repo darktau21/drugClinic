@@ -1,0 +1,125 @@
+.popular-services
+  &__container
+    padding-top: 70px
+    padding-bottom: 100px
+    @media screen and ( max-width: 1070px )
+      padding-top: 30px
+      display: flex
+      flex-direction: column
+      align-items: stretch
+      padding-bottom: 40px
+  &__complex-help-lists
+    padding-top: 20px
+  &__content
+    margin-top: 25px
+    display: flex
+    gap: 20px
+    @media screen and ( max-width: 1070px )
+      flex-direction: column
+      align-items: stretch
+  &__img-container
+    flex: 1 5 auto
+    margin-left: 3%
+    border-right: 1px solid #B6D1FF
+    max-height: 700px
+    align-self: stretch
+    padding-bottom: 100px
+    @media screen and ( max-width: 1070px )
+      display: none
+    &::before
+      left: -5%
+      top: -1%
+  &__img
+    border-radius: 112px 0px
+    background-image: url("./img/services.png")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    content: ""
+    display: block
+    min-height: 100%
+    min-width: 100%
+    &::after
+      bottom: -22%
+      left: 0
+  &__lists
+    flex: 3 2 auto
+    margin-left: auto
+    max-width: 65%
+    @media screen and ( max-width: 1070px )
+      margin-left: 0
+      max-width: 100%
+  &__lists-title
+    margin-bottom: 12px
+    position: relative
+    padding-left: 70px
+    @media screen and ( max-width: 1070px )
+      padding-left: 0
+      margin-right: 0
+      margin-top: 10px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      gap: 20px
+    & span
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background-color: #F1F5FF
+      flex: 1 0 40px
+      position: relative
+      max-width: 40px
+      cursor: pointer
+      transition: 0.3s
+      @media screen and ( min-width: 1070px )
+        display: none
+      &::hover
+        background-color: darken(#F1F5FF, 10)
+      &::active
+        background-color: darken(#F1F5FF, 20)
+      &::before, &::after
+        width: 18px
+        height: 2px
+        position: absolute
+        top: 50%
+        margin-top: -1px
+        left: 50%
+        margin-left: -9px
+        content: ""
+        background-color: #2770F1
+        display: block
+        transition: inherit
+      &::after
+        transform: rotate(90deg)
+    &_active span::after
+      transform: none
+    &::before
+      height: 50px
+      width: 50px
+      background-size: contain
+      background-repeat: no-repeat
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      left: 0
+      margin-top: -25px
+      @media screen and ( max-width: 1070px )
+        display: none
+    &_quick-help::before
+      background-image: url("./img/fast-icon.svg")
+    &_complex-help::before
+      background-image: url("./img/heart-icon.svg")
+  &__lists-container
+    border-top: 1px solid #D7E2FF
+    display: flex
+    justify-content: flex-end
+    padding-right: 10px
+    flex-wrap: wrap
+    gap: 20px
+    @media screen and ( max-width: 1070px )
+      padding-right: 0
+  &__list
+    flex: 1 0 auto
+    @media screen and ( max-width: 1070px )
+      max-width: 100%

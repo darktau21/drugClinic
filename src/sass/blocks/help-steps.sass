@@ -1,0 +1,36 @@
+.help-steps
+  background-color: #1B315F
+  &__container
+    padding: 40px 0
+    &::before
+      left: 0
+      bottom: 2%
+    &::after
+      right: 0
+      top: -15%
+  &__title
+    @media screen and ( max-width: 1070px )
+      margin-bottom: 20px
+  &__content
+    display: flex
+    justify-content: center
+    align-items: space-between
+    gap: 30px
+    @media screen and ( max-width: 1070px )
+      flex-direction: column-reverse
+  &__steps-list
+    flex: 6 2 30%
+    padding-top: 30px
+  &__img-container
+    flex: 1 5 30%
+    margin-right: -4%
+    max-height: 700px
+    align-self: center
+    @media screen and ( max-width: 1070px )
+      margin-right: 0
+    & img
+      width: 100%
+      height: auto
+    &::after
+      right: 0
+      bottom: -18.8%

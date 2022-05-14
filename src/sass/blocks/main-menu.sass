@@ -1,0 +1,92 @@
+.main-menu
+  &__top-line
+    display: flex
+    align-items: center
+    gap: 15px
+    padding: 10px 0
+    padding-bottom: 5px
+    @media screen and ( max-width: 1070px )
+      padding: 5px 0
+      z-index: 100
+      position: relative
+  &__bottom-line
+    padding-top: 5px
+    padding-bottom: 10px
+  &__socials div
+    @media screen and ( max-width: 1070px )
+      display: none
+  &__contacts
+    margin-left: auto
+    align-items: flex-end
+    @media screen and ( max-width: 1070px )
+      display: none
+  &__search
+    @media screen and ( max-width: 1070px )
+      margin-left: auto
+  &__search button
+    border-radius: 4px
+  &__search-icon
+    width: 45px
+    height: 45px
+    vertical-align: middle
+    cursor: pointer
+    transition: 0.3s
+    & rect
+      fill: #F1F5FF
+      transition: inherit
+      @media screen and ( max-width: 1070px )
+        fill: #FFFFFF
+    & path
+      fill: #2770F1
+      transition: inherit
+    &:hover
+      & rect
+        fill: #2770f1
+        @media screen and ( max-width: 1070px )
+          fill: #FFFFFF
+      & path
+        fill: #F1F5FF
+        @media screen and ( max-width: 1070px )
+          fill: darken(#2770f1, 10)
+    &:active
+      & rect
+        fill: darken(#2770f1, 10)
+        @media screen and ( max-width: 1070px )
+          fill: #FFFFFF
+      & path
+        fill: darken(#F1F5FF, 10)
+        @media screen and ( max-width: 1070px )
+          fill: darken(#2770f1, 20)
+  &__call-btn
+    @media screen and ( max-width: 1070px )
+      display: none
+  &__mobile-btn
+    position: relative
+    width: 40px
+    height: 40px
+    cursor: pointer
+    @media screen and ( min-width: 1070px )
+      display: none
+    &:hover span, &:hover::after, &:hover::before
+      background-color: darken(#2770F1, 20)
+    & span, &::after, &::before
+       content: ""
+       width: 8px
+       height: 8px
+       background-color: #2770F1
+       border-radius: 50%
+       position: absolute
+       top: 50%
+       margin-top: -4px
+       transition: 0.3s
+    &::before
+      left: 0
+    & span
+      left: 50%
+      margin-left: -4px
+    &::after
+      right: 0
+
+ul.main-menu__bottom-line
+  @media screen and ( max-width: 1070px )
+      display: none
