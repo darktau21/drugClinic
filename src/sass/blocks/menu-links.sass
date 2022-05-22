@@ -2,33 +2,60 @@
   display: flex
   @media screen and ( min-width: 1070px )
     justify-content: space-around
+  & a
+    color: #1B315F
+    font-size: 18px
+    display: block
+    transition: 0.3s
+    &:hover
+      color: lighten(#1B315F, 10)
+    &:active
+      color: lighten(#1B315F, 20)
+  &__item
+    position: relative
+    &:hover
+      & .menu-links__sub-menu
+        max-height: 300px
+        opacity: 1
+      & .menu-links__link_plus::after
+        transform: rotate(180deg)
   &__link
     font-weight: 500
-    font-size: 16px
-    transition: 0.3s
-    &_color-dark
-      & a
-        transition: inherit
-        color: #1B315F
-      &:hover a
-        color: lighten(#1B315F, 20)
-      &:active a
-        color: lighten(#1B315F, 30)
-  &__sub-menu
     position: relative
-    & a
-      &::after, &::before
+    z-index: 15
+    padding: 8px 12px
+    &_plus
+      padding-right: 30px
+      &::before, &::after
         content: ""
         display: block
+        position: absolute
+        top: 50%
+        right: 8px
+        margin-top: -1px
         width: 12px
         height: 2px
         background-color: #2770F1
-        position: absolute
-        right: -17%
-        top: 50%
-        margin-top: -1px
       &::after
         transform: rotate(90deg)
+        transition: 0.3s
+  &__sub-menu
+    position: absolute
+    top: 0
+    left: 0
+    background-color: #fff
+    box-shadow: 0px 4px 24px rgba(27, 49, 95, 0.15)
+    width: 100%
+    padding-top: 40px
+    z-index: 10
+    max-height: 0
+    overflow: hidden
+    opacity: 0
+    transition: max-height 0.3s, opacity 0.4s
+  &__sub-menu-link
+    font-weight: 400
+    padding: 8px 12px
+
 
 
 
