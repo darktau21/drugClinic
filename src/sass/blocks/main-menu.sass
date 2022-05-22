@@ -10,8 +10,15 @@
       z-index: 100
       position: relative
   &__bottom-line
-    padding-top: 5px
-    padding-bottom: 10px
+    background-color: #FFFFFF
+    width: 100%
+    z-index: 20
+    &_fixed
+      position: fixed
+      animation: fixedMenu 0.3s
+      top: 0
+      left: 0
+      box-shadow: 0px 4px 32px rgba(27, 49, 95, 0.1), 0px 4px 72px rgba(27, 49, 95, 0.2)
   &__socials div
     @media screen and ( max-width: 1070px )
       display: none
@@ -90,3 +97,9 @@
 ul.main-menu__bottom-line
   @media screen and ( max-width: 1070px )
       display: none
+
+@keyframes fixedMenu
+  0%
+    top: -100px
+  100%
+    top: 0

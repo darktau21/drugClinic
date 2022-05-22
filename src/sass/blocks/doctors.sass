@@ -8,7 +8,7 @@
   &__window
     align-items: stretch
   &__card
-    flex: 1 0 auto
+    flex: 0 1 25%
     @media screen and ( max-width: 1070px )
       flex: 1 0 40%
     @media screen and ( max-width: 545px )
@@ -40,3 +40,9 @@
       position: static
       margin-bottom: -4px
       margin-left: 10px
+  &::before
+    top: -15%
+    left: -2%
+  &::after
+    bottom: -15%
+    right: -2%
