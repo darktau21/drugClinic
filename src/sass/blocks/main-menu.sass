@@ -23,10 +23,27 @@
     @media screen and ( max-width: 1070px )
       display: none
   &__contacts
+    display: flex
     margin-left: auto
     align-items: flex-end
+    flex-direction: column
+    justify-content: space-between
     @media screen and ( max-width: 1070px )
       display: none
+  &__tel
+    color: #162C5B
+    font-weight: 800
+    font-size: 22px
+    line-height: 28px
+    transition: 0.3s
+    &:hover
+      text-decoration: underline
+      color: lighten(#162C5B, 10)
+  &__address
+    color: #1B315F
+    line-height: 24px
+    font-size: 14px
+    font-style: normal
   &__search
     @media screen and ( max-width: 1070px )
       margin-left: auto

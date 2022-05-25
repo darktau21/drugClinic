@@ -99,3 +99,18 @@
       height: 35%
       position: absolute
       z-index: 1
+  &-6
+    position: relative
+    z-index: 5
+    &::after
+      @media screen and ( max-width: 1070px )
+        display: none
+      content: ""
+      background-image: url("./img/sticker5.svg")
+      background-size: contain
+      background-repeat: no-repeat
+      width: 35%
+      height: 35%
+      position: absolute
+      z-index: 1
+      transform: rotate(-90deg)

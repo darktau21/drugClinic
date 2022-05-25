@@ -88,9 +88,9 @@
                     </a>
                   </div>
                 </div>
-                <div class="main-menu__contacts contacts">
-                  <a class="contacts__tel" href="tel:+78001234567">8 (800) 123-45-67</a>
-                  <address class="contacts__address">г. Богучар, ул. Мжд Киевское 17-й км</address>
+                <div class="main-menu__contacts">
+                  <a class="main-menu__tel" href="tel:+78001234567">8 (800) 123-45-67</a>
+                  <address class="main-menu__address">г. Богучар, ул. Мжд Киевское 17-й км</address>
                 </div>
                 <div class="main-menu__search">
                   <button>
@@ -229,7 +229,13 @@
                 </ul>
                 <div class="promo__btns">
                   <button class="btn btn_color-blue">Оставить заявку</button>
-                  <a class="btn btn_color-light" href="//api.whatsapp.com/send?phone=+79181974558&text=Чечня на связи" target="_blank" rel="noopener noreferrer">Написать на WhatsApp</a>
+                  <a
+                    class="btn btn_color-light"
+                    href="//api.whatsapp.com/send?phone=+79181974558&text=Чечня на связи"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Написать на WhatsApp</a
+                  >
                 </div>
               </div>
               <div class="promo__img-container sticker-dots-b sticker-1">
@@ -963,7 +969,7 @@
         </section>
         <section class="reviews">
           <div class="container">
-            <div class="border-container">
+            <div class="border-container reviews__wrapper">
               <h2 class="reviews__title title title_color-dark title_border-left title_size-2">
                 За нас говорят наши клиенты
               </h2>
@@ -1021,7 +1027,9 @@
               </div>
               <div class="reviews__btns">
                 <a class="btn btn_color-light reviews__show-all-btn" href="">Все отзывы</a>
-                <button class="btn btn_color-blue reviews__write-comment-btn">Написать отзыв</button>
+                <button class="btn btn_color-blue reviews__write-comment-btn">
+                  Написать отзыв
+                </button>
               </div>
             </div>
           </div>
@@ -1029,15 +1037,57 @@
         <section class="welcome">
           <div class="container">
             <div class="border-container">
-              <h2 class="welcome__title title title_size-2 title_color-dark title_border-left">Ждем вас в медицинском центре <div class="welcome__logo">
-                <a href="#">
-                  <img src="./img/logo.svg" />
-                </a>
-              </div></h2>
+              <h2 class="welcome__title title title_size-2 title_color-dark title_border-left">
+                Ждем вас в медицинском центре <span>Клиника ПЛЮС</span>
+              </h2>
+              <div class="welcome__container sticker-dots-b">
+                <div class="welcome__contacts sticker-6 contacts">
+                  <div class="contacts__info">
+                    <h3 class="contacts__title title title_size-3 title_color-dark">
+                      Как к нам добраться?
+                    </h3>
+                    <address class="contacts__address">
+                      г. Богучар, ул. Мжд Киевское 17-й км
+                    </address>
+                    <a class="contacts__tel" href="tel:+78001234567">8 (800) 123-45-67</a>
+                    <a class="contacts__tel" href="tel:+78001234567">8 (800) 123-45-67</a>
+                  </div>
+                  <div class="contacts__btns">
+                    <a class="btn btn_color-light" href="">Наши контакты</a>
+                    <button class="btn btn_color-blue">Оставить заявку</button>
+                  </div>
+                  <div class="contacts__ratings">
+                    <h3 class="contacts__rating-title title title_size-3 title_color-dark">
+                      Наши рейтинги
+                    </h3>
+                    <div class="contacts__ratings-container">
+                      <img src="./img/yandex-rating.png" alt="Яндекс рейтинг" />
+                      <img src="./img/google-rating.png" alt="Гугл рейтинг" />
+                    </div>
+                  </div>
+                </div>
+                <div class="welcome__map" style="position: relative; overflow: hidden">
+                  <a
+                    href="https://yandex.ru/maps/39/rostov-na-donu/?utm_medium=mapframe&utm_source=maps"
+                    style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+                    >Ростов‑на‑Дону</a
+                  ><a
+                    href="https://yandex.ru/maps/39/rostov-na-donu/house/ulitsa_milchakova_10/Z0AYcAVnTUcAQFptfX5weXViYA==/?ll=39.628521%2C47.218720&utm_medium=mapframe&utm_source=maps&z=16.65"
+                    style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+                    >Улица Мильчакова, 10 — Яндекс Карты</a
+                  ><iframe
+                    src="https://yandex.ru/map-widget/v1/-/CCUJQRAYGB"
+                    frameborder="1"
+                    allowfullscreen="true"
+                    style="position: relative"
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
+      <footer class="main-footer"></footer>
     </div>
     <div class="mobile-menu">
       <ul class="menu-links mobile-menu__links">
