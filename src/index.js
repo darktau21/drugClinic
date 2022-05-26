@@ -12,8 +12,11 @@ MobMenu.init();
 const ContactFormPopup = new ContactPopup('js_open-form-btn', 'js_close-popup', 'popup', 'popup_active');
 ContactFormPopup.init();
 
-const FooterMenu = new Accordeon('js_footer-menu-accordeon','.menu-links__link_plus', 'menu-links__item_active');
+const FooterMenu = new Accordeon('js_footer-menu-accordeon','.menu-links__link_plus', 'menu-links__item_active', true);
 FooterMenu.init();
 
-const MobMenuAccordeon = new Accordeon('js_mobile-menu-accordeon','.menu-links__link_plus', 'menu-links__item_active');
+const MobMenuAccordeon = new Accordeon('js_mobile-menu-accordeon','.menu-links__link_plus', 'menu-links__item_active', true);
 MobMenuAccordeon.init();
+
+const HelpListsAccordeon = new Accordeon('js_help-lists','.popular-services__lists-title', 'popular-services__help-lists_active', false);
+HelpListsAccordeon.init();

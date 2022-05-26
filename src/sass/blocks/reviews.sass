@@ -79,17 +79,20 @@
         @media screen and ( max-width: 1000px )
           right: 0
   &__window
-    display: flex
-    justify-content: space-around
     max-width: 90%
     margin: 0 auto
-    gap: 30px
     overflow: hidden
     @media screen and ( max-width: 1000px )
       max-width: 100%
       justify-content: flex-start
+  &__inner
+    display: flex
+    justify-content: space-around
+    gap: 3%
+    @media screen and ( max-width: 1000px )
+      justify-content: flex-start
   &__comment
-    flex: 0 1 45%
+    flex: 1 0 47%
     @media screen and ( max-width: 1000px )
       flex: 1 0 100%
       order: 1

@@ -1,12 +1,13 @@
 export default class Accordeon {
-  constructor(accrodeonClass, itemSelector, activeClass) {
+  constructor(accrodeonClass, itemSelector, activeClass, close) {
     this.container = document.querySelector(`.${accrodeonClass}`);
     this.items = this.container.querySelectorAll(itemSelector);
     this.activeClass = activeClass;
+    this.close = close;
   }
 
   setListeners() {
-    this.items.forEach(item => {
+    this.items.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -21,10 +22,18 @@ export default class Accordeon {
         }
       });
     });
+
+    if (this.close) {
+      window.addEventListener('click', (e) => {
+        if (!e.target.classList.contains(this.container)) {
+          this.closeAll();
+        }
+      });
+    }
   }
 
   closeAll() {
-    this.items.forEach(item => {
+    this.items.forEach((item) => {
       item.parentElement.classList.remove(this.activeClass);
     });
   }
