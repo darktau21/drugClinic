@@ -7,13 +7,42 @@
   text-align: center
   max-width: 850px
   padding: 30px
+  border-radius: 4px
+  box-sizing: border-box
   @media screen and ( max-width: 1070px )
-    padding: 0
-  &_section
+    padding: 15px 8px
+    width: 106%
+    margin-left: -3%
+    border-radius: 0
+  &_color-light-blue
     background-color:#2770F1
-    border-radius: 4px
+  &_color-white
+    background-color: #fff
+    color: #1B315F
+    & .feedback-form
+      &__input
+        border: 1px solid #2770F133
+        color: #162C5B
+        &::placeholder
+          color: #162C5B33
+      &__agreement a
+        color: #1B315F
+  &_mobile-color-transparent
     @media screen and ( max-width: 1070px )
       background-color: transparent
+  &_vertical
+    max-width: 600px
+    box-sizing: border-box
+    margin: 0
+    & .feedback-form
+      &__inputs
+        flex-direction: column
+      &__input-container, &__input-submit
+        flex: 1 1 auto
+      &__icon-name::before
+        background-image: url("./img/name-blue-icon.svg")
+      &__icon-phone::before
+        background-image: url("./img/phone-blue-icon.svg")
   &__title
     font-size: 32px
     font-weight: 700
@@ -64,12 +93,21 @@
       color: #fff
   &__input-submit
     flex: 1 3 200px
-    @media screen and ( max-width: 1070px )
-      background-color: #2770F1
-    &::hover
-      background-color: darken(#2770F1, 10)
-    &::active
-      background-color: darken(#2770F1, 20)
+    &_mobile-light
+      @media screen and ( max-width: 1070px )
+        background-color: #2770F1
+      &::hover
+        background-color: darken(#2770F1, 10)
+      &::active
+        background-color: darken(#2770F1, 20)
+  &__close-btn
+    flex: 1 3 200px
+  &__btns
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 10px
+    flex-wrap: wrap-reverse
   &__agreement
     font-size: 16px
     padding-top: 24px

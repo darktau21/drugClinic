@@ -9,19 +9,37 @@
     height: 35px
     vertical-align: bottom
     transition: 0.3s
-    & rect
-      fill: #F1F5FF
-      transition: inherit
-    & path
-      fill: #2770f1
-      transition: inherit
-    &:hover
+    &_color-light
       & rect
-        fill: #2770f1
-      & path
         fill: #F1F5FF
-    &:active
-      & rect
-        fill: darken(#2770f1, 10)
+        transition: inherit
       & path
-        fill: darken(#F1F5FF, 10)
+        fill: #2770f1
+        transition: inherit
+      &:hover
+        & rect
+          fill: #2770f1
+        & path
+          fill: #F1F5FF
+      &:active
+        & rect
+          fill: darken(#2770f1, 10)
+        & path
+          fill: darken(#F1F5FF, 10)
+    &_color-dark
+      & rect
+        fill: rgba(39, 112, 241, 0.2)
+        transition: inherit
+      & path
+        fill: #FFFFFF
+        transition: inherit
+      &:hover
+        & rect
+          fill: #FFFFFF
+        & path
+          fill: #00338b
+      &:active
+        & rect
+          fill: darken(#ffffff, 10)
+        & path
+          fill: darken(#00338b, 10)

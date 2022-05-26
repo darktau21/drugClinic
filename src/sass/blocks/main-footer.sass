@@ -1,0 +1,67 @@
+.main-footer
+  background-color: #162D5F
+  &__container
+    padding: 40px 0
+    display: flex
+    gap: 40px
+    align-items: flex-start
+    @media screen and ( max-width: 1070px )
+      padding: 20px 0
+      flex-direction: column
+  &__contacts
+    color: #FFFFFF
+    font-size: 18px
+    display: flex
+    flex-direction: column
+    gap: 20px
+    flex: 0 1 20%
+  &__tel
+    color: #FFFFFF
+    font-size: 24px
+    font-weight: 800
+    transition: 0.3s
+    &:hover
+      color: darken(#FFFFFF, 10)
+      text-decoration: underline
+    &:active
+      color: darken(#FFFFFF, 20)
+      text-decoration: underline
+  &__address-title, &__email-title
+    font-size: 18px
+    font-weight: 800
+    position: relative
+    padding-left: 26px
+    &::before
+      content: ""
+      display: block
+      width: 24px
+      height: 24px
+      position: absolute
+      left: 0
+      top: 50%
+      margin-top: -13px
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      background-image: url("./img/map-icon.svg")
+  &__address
+    font-style: normal
+  &__email
+    text-decoration: underline
+    transition: 0.3s
+    &:hover
+      color: darken(#FFFFFF, 10)
+      text-decoration: underline
+    &:active
+      color: darken(#FFFFFF, 20)
+      text-decoration: underline
+  &__socials
+    justify-content: flex-start
+  &__feedback-form
+    flex: 0 1 60%
+  &__links
+    flex: 0 1 20%
+  &__links-title
+    color: #FFFFFF
+    font-size: 18px
+    font-weight: 800

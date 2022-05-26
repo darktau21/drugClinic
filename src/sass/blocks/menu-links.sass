@@ -2,56 +2,86 @@
   display: flex
   @media screen and ( min-width: 1070px )
     justify-content: space-around
-  & a
-    color: #1B315F
-    font-size: 18px
-    display: block
-    transition: 0.3s
-    &:hover
-      color: lighten(#1B315F, 10)
-    &:active
-      color: lighten(#1B315F, 20)
+  &_vertical
+    flex-direction: column
+  &_color-dark
+    & a
+      color: #1B315F
+      &:hover
+        color: lighten(#1B315F, 10)
+      &:active
+        color: lighten(#1B315F, 20)
+    & .menu-links__sub-menu
+      background-color: #fff
+  &_color-light
+    & a
+      color: #ffffff
+      &:hover
+        color: darken(#ffffff, 10)
+      &:active
+        color: darken(#ffffff, 20)
   &__item
-    position: relative
-    &:hover
+    &_hover
+      position: relative
+      z-index: 25
+      &:hover
+        & .menu-links__sub-menu
+          max-height: 300px
+          opacity: 1
+          box-shadow: 0px 4px 24px rgba(27, 49, 95, 0.15)
+        & .menu-links__link_plus span::after
+          transform: rotate(180deg)
       & .menu-links__sub-menu
-        max-height: 300px
-        opacity: 1
-      & .menu-links__link_plus::after
-        transform: rotate(180deg)
+        position: absolute
+        top: 0
+        left: 0
+        max-height: 0
+        opacity: 0
+        padding-top: 40px
+    &_active
+      & .menu-links__sub-menu
+          max-height: 300px
+          opacity: 1
+      & .menu-links__link_plus span::after
+          transform: rotate(180deg)
+  & a
+    font-size: 18px
+    display: inline-block
+    transition: 0.3s
+    z-index: 25
+    position: relative
   &__link
     font-weight: 500
-    position: relative
-    z-index: 15
     padding: 8px 12px
     &_plus
       padding-right: 30px
-      &::before, &::after
-        content: ""
-        display: block
-        position: absolute
-        top: 50%
-        right: 8px
-        margin-top: -1px
+      z-index: 20
+      & span
+        position: relative
+        z-index: 15
         width: 12px
-        height: 2px
-        background-color: #2770F1
-      &::after
-        transform: rotate(90deg)
-        transition: 0.3s
+        height: 12px
+        margin-left: 5px
+        &::before, &::after
+          content: ""
+          display: block
+          position: absolute
+          top: 50%
+          left: 0
+          margin-top: -1px
+          width: 12px
+          height: 2px
+          background-color: #2770F1
+        &::after
+          transform: rotate(90deg)
+          transition: 0.3s
   &__sub-menu
-    position: absolute
-    top: 0
-    left: 0
-    background-color: #fff
-    box-shadow: 0px 4px 24px rgba(27, 49, 95, 0.15)
     width: 100%
-    padding-top: 40px
     z-index: 10
-    max-height: 0
     overflow: hidden
-    opacity: 0
     transition: max-height 0.3s, opacity 0.4s
+    max-height: 0
+    opacity: 0
   &__sub-menu-link
     font-weight: 400
     padding: 8px 12px
