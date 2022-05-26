@@ -565,7 +565,7 @@
         <section class="get-consultation">
           <div class="container get-consultation__container sticker-dots-b sticker-dots-a">
             <form
-              action=""
+              action="./server.php"
               class="feedback-form feedback-form_color-light-blue feedback-form_mobile-color-transparent"
               method="post"
             >
@@ -592,11 +592,12 @@
                     placeholder="Телефон"
                   />
                 </div>
-                <input
+                <button
                   class="feedback-form__input-submit feedback-form__input-submit_mobile-light btn btn_color-dark"
                   type="submit"
-                  value="Оставить заявку"
-                />
+                >
+                  Оставить заявку
+                </button>
               </div>
               <p class="feedback-form__agreement">
                 Нажимая кнопку “Отправить заявку”, вы даете согласие на обработку
@@ -1286,7 +1287,7 @@
             </div>
           </div>
           <form
-            action=""
+            action="./server.php"
             class="feedback-form feedback-form_color-light-blue main-footer__feedback-form"
             method="post"
           >
@@ -1313,11 +1314,9 @@
                   placeholder="Телефон"
                 />
               </div>
-              <input
-                class="feedback-form__input-submit btn btn_color-dark"
-                type="submit"
-                value="Оставить заявку"
-              />
+              <button class="feedback-form__input-submit btn btn_color-dark" type="submit">
+                Оставить заявку
+              </button>
             </div>
             <p class="feedback-form__agreement">
               Нажимая кнопку “Отправить заявку”, вы даете согласие на обработку
@@ -1609,9 +1608,10 @@
     </div>
     <div class="popup js_popup">
       <form
-        action=""
+        action="./server.php"
         class="feedback-form feedback-form_color-white feedback-form_vertical"
         method="post"
+        id="popup-form"
       >
         <h2 class="feedback-form__title">Получите консультацию специалиста бесплатно</h2>
         <p class="feedback-form__desc">
@@ -1637,14 +1637,19 @@
             />
           </div>
           <div class="feedback-form__btns">
-            <button class="feedback-form__close-btn btn btn_color-light js_close-popup">
+            <button
+              class="feedback-form__close-btn btn btn_color-light js_close-popup"
+              type="button"
+            >
               Отмена
             </button>
-            <input
-              class="feedback-form__input-submit feedback-form__input-submit_mobile-light btn btn_color-dark"
+            <button
+              class="feedback-form__input-submit feedback-form__input-submit_mobile-light btn btn_color-blue"
               type="submit"
-              value="Оставить заявку"
-            />
+              name="submit"
+            >
+              Оставить заявку
+            </button>
           </div>
         </div>
         <p class="feedback-form__agreement">

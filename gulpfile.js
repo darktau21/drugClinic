@@ -15,7 +15,8 @@ const webpack = require('webpack-stream');
 
 // Paths
 const source = './src';
-const dist = './dist';
+// const dist = './dist';
+const dist = 'C:\\openserver\\domains\\drugclinic.ru';
 
 // NODE_ENV mode
 let devMode;
@@ -162,7 +163,6 @@ function watchbr() {
 
 if (devMode) {
   exports.default = series(
-    cleandist,
     parallel(compileHTML, compileSass, compileJS, copyAssets),
     watchbr
   );

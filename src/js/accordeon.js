@@ -1,6 +1,6 @@
 export default class Accordeon {
-  constructor(accrodeonClass, itemSelector, activeClass, close) {
-    this.container = document.querySelector(`.${accrodeonClass}`);
+  constructor({accordeonClass, itemSelector, activeClass, close}) {
+    this.container = document.querySelector(`.${accordeonClass}`);
     this.items = this.container.querySelectorAll(itemSelector);
     this.activeClass = activeClass;
     this.close = close;

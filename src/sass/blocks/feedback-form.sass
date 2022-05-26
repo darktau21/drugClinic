@@ -37,8 +37,8 @@
     & .feedback-form
       &__inputs
         flex-direction: column
-      &__input-container, &__input-submit
-        flex: 1 1 auto
+      &__input-container, &__input-submit, &__close-btn
+        flex: 1 0 auto
       &__icon-name::before
         background-image: url("./img/name-blue-icon.svg")
       &__icon-phone::before
@@ -100,8 +100,20 @@
         background-color: darken(#2770F1, 10)
       &::active
         background-color: darken(#2770F1, 20)
-  &__close-btn
-    flex: 1 3 200px
+    &_loading
+      &::after
+        width: 20px
+        height: 20px
+        content: ""
+        display: inline-block
+        background-image: url("./img/load-icon.svg")
+        background-repeat: no-repeat
+        background-position: top
+        background-size: cover
+        position: static
+        margin-bottom: -6px
+        margin-left: 10px
+        animation: rotate 1.2s infinite linear
   &__btns
     display: flex
     justify-content: center
