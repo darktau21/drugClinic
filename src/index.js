@@ -3,6 +3,7 @@ import MobileMenu from './js/mobile-menu';
 import ContactPopup from './js/popup';
 import Accordeon from './js/accordeon';
 import Form from './js/form';
+import Carousel from './js/carousel';
 
 const Menu = new TopMenu({
   menuClass: 'js_fixed-menu',
@@ -59,3 +60,9 @@ const FeedbackForms = new Form({
   loadingClass: 'feedback-form__input-submit_loading'
 });
 FeedbackForms.init();
+
+const CertCarousel = new Carousel('certificates__wrapper');
+CertCarousel.init();
+
+const DoctorsCarousel = new Carousel('doctors__wrapper');
+DoctorsCarousel.init();
