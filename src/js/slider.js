@@ -3,8 +3,10 @@ export default class Sldier {
     this.container = document.querySelector(`.${container}`);
     this.wrapper = document.querySelector('.slider-wrapper');
     this.inner = this.container.querySelector('.slider-inner');
-    this.scrollVal = this.wrapper.clientWidth;
-    this.slidesCount = this.slidesCount = Math.round(this.wrapper.scrollWidth / this.scrollVal);
+    try {
+      this.scrollVal = this.wrapper.clientWidth;
+      this.slidesCount = this.slidesCount = Math.round(this.wrapper.scrollWidth / this.scrollVal);
+    } catch (e) {}
     this.currentSlide = 0;
     this.prevBtn = this.container.querySelector('.slider-btn-prev');
     this.nextBtn = this.container.querySelector('.slider-btn-next');
@@ -20,7 +22,9 @@ export default class Sldier {
   }
 
   changeSlide() {
-    this.inner.style.transform = `translateX(-${100 * this.currentSlide}%)`;
+    try {
+      this.inner.style.transform = `translateX(-${100 * this.currentSlide}%)`;
+    } catch (e) {}
   }
 
   prevSlide() {
@@ -45,6 +49,8 @@ export default class Sldier {
   }
 
   init() {
-    this.setListeners();
+    try {
+      this.setListeners();
+    } catch (e) {}
   }
 }

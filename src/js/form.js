@@ -17,25 +17,25 @@ export default class Form {
   }
 
   setListeners() {
-    this.forms.forEach((form) => {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
+    try {
+      this.forms.forEach((form) => {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
 
-        const formCopy = form.innerHTML;
-        const btn = form.querySelector(`.${this.submitBtn}`);
-        btn.textContent = 'Загрузка';
-        btn.classList.add(this.loadingClass);
+          const formCopy = form.innerHTML;
+          const btn = form.querySelector(`.${this.submitBtn}`);
+          btn.textContent = 'Загрузка';
+          btn.classList.add(this.loadingClass);
 
+          const formData = new FormData(form);
+          this.postData(formData)
+            .then((res) => {
+              console.log(res);
+              if (!res.ok) {
+                throw new Error('Ошибка сервера!');
+              }
 
-        const formData = new FormData(form);
-        this.postData(formData)
-          .then((res) => {
-            console.log(res);
-            if (!res.ok) {
-              throw new Error('Ошибка сервера!');
-            }
-
-            form.innerHTML = `
+              form.innerHTML = `
           <h2 class="feedback-form__title">Сообщение отправлено</h2>
           <p class="feedback-form__desc">
           Ваше сообщение отправлено, скоро мы свяжемся с вами
@@ -47,9 +47,9 @@ export default class Form {
               Спасибо
             </button>
           `;
-          })
-          .catch(() => {
-            form.innerHTML = `
+            })
+            .catch(() => {
+              form.innerHTML = `
             <h2 class="feedback-form__title">Произошла ошибка</h2>
             <p class="feedback-form__desc">
             Попробуйте снова или свяжитесь с нами другим способом
@@ -61,14 +61,15 @@ export default class Form {
                 Закрыть
               </button>
           `;
-          }).finally(() => {
-            setTimeout(() => {
-              form.innerHTML = formCopy;
-            }, 7000);
-          });
+            })
+            .finally(() => {
+              setTimeout(() => {
+                form.innerHTML = formCopy;
+              }, 7000);
+            });
+        });
       });
-    });
-
+    } catch (e) {}
   }
 
   init() {

@@ -1,5 +1,5 @@
 export default class Accordeon {
-  constructor({accordeonClass, itemSelector, activeClass, close}) {
+  constructor({ accordeonClass, itemSelector, activeClass, close }) {
     this.container = document.querySelector(`.${accordeonClass}`);
     this.items = this.container.querySelectorAll(itemSelector);
     this.activeClass = activeClass;
@@ -7,35 +7,39 @@ export default class Accordeon {
   }
 
   setListeners() {
-    this.items.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+    try {
+      this.items.forEach((item) => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
 
-        let parent = item.parentElement;
+          let parent = item.parentElement;
 
-        if (parent.classList.contains(this.activeClass)) {
-          parent.classList.remove(this.activeClass);
-        } else {
-          this.closeAll();
-          parent.classList.add(this.activeClass);
-        }
+          if (parent.classList.contains(this.activeClass)) {
+            parent.classList.remove(this.activeClass);
+          } else {
+            this.closeAll();
+            parent.classList.add(this.activeClass);
+          }
+        });
       });
-    });
 
-    if (this.close) {
-      window.addEventListener('click', (e) => {
-        if (!e.target.classList.contains(this.container)) {
-          this.closeAll();
-        }
-      });
-    }
+      if (this.close) {
+        window.addEventListener('click', (e) => {
+          if (!e.target.classList.contains(this.container)) {
+            this.closeAll();
+          }
+        });
+      }
+    } catch (e) {}
   }
 
   closeAll() {
-    this.items.forEach((item) => {
-      item.parentElement.classList.remove(this.activeClass);
-    });
+    try {
+      this.items.forEach((item) => {
+        item.parentElement.classList.remove(this.activeClass);
+      });
+    } catch (e) {}
   }
 
   init() {

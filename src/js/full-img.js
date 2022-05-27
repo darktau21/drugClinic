@@ -5,10 +5,12 @@ export default class FullImg {
   }
 
   setCloseListeners() {
-    this.popup.addEventListener('click', () => {
-      this.popup.classList.remove('popup_active');
-      document.body.style.overflow = '';
-    });
+    try {
+      this.popup.addEventListener('click', () => {
+        this.popup.classList.remove('popup_active');
+        document.body.style.overflow = '';
+      });
+    } catch (e) {}
   }
 
   open() {
@@ -17,20 +19,22 @@ export default class FullImg {
   }
 
   setImgListeners() {
-    this.container.addEventListener('click', (e) => {
-      let src;
-      if (e.target.tagName == 'IMG') {
-        src = e.target.src;
-      } else {
-        src = e.target.querySelector('img').src;
-      }
+    try {
+      this.container.addEventListener('click', (e) => {
+        let src;
+        if (e.target.tagName == 'IMG') {
+          src = e.target.src;
+        } else {
+          src = e.target.querySelector('img').src;
+        }
 
-      this.popup.innerHTML = `
+        this.popup.innerHTML = `
       <img src="${src}" style="max-width: 100%; max-height: 100%;" />
       `;
 
-      this.open();
-    });
+        this.open();
+      });
+    } catch (e) {}
   }
 
   init() {

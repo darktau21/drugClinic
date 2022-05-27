@@ -25,6 +25,10 @@ module.exports = {
         'semi': [
             'error',
             'always'
+        ],
+        'no-empty': [
+            'off',
+            'always'
         ]
     }
 };
