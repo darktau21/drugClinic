@@ -4,6 +4,9 @@ import ContactPopup from './js/popup';
 import Accordeon from './js/accordeon';
 import Form from './js/form';
 import Carousel from './js/carousel';
+import FullImg from './js/full-img';
+import FullComment from './js/full-comment';
+import Sldier from './js/slider';
 
 const Menu = new TopMenu({
   menuClass: 'js_fixed-menu',
@@ -23,7 +26,7 @@ MobMenu.init();
 const ContactFormPopup = new ContactPopup({
   openBtnClass: 'js_open-form-btn',
   closeBtnClass: 'js_close-popup',
-  popupClass: 'popup',
+  popupClass: 'form-popup',
   popupActiveClass: 'popup_active'
 });
 ContactFormPopup.init();
@@ -66,3 +69,15 @@ CertCarousel.init();
 
 const DoctorsCarousel = new Carousel('doctors__wrapper');
 DoctorsCarousel.init();
+
+const CertImgs = new FullImg('certificates__window');
+CertImgs.init();
+
+const ClinicImgs = new FullImg('gallery__photos');
+ClinicImgs.init();
+
+const Comments = new FullComment('reviews__inner');
+Comments.init();
+
+const Reviews = new Sldier('reviews__container');
+Reviews.init();

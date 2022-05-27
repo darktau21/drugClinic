@@ -7,7 +7,6 @@ export default class Carousel {
   }
 
   setListeners() {
-    console.log(this.container)
     this.wrapper.querySelector('.carousel__btn_next').addEventListener('click', () => {
       this.container.scrollBy({
         left: this.scrollWidth,
