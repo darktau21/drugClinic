@@ -6,6 +6,8 @@
   @media screen and ( max-width: 1070px )
     box-shadow: 0 0 0
     padding: 0
+  &_block
+    box-shadow: inherit
   &__info
     display: flex
     flex-direction: column
@@ -32,12 +34,28 @@
       background-repeat: no-repeat
       background-position: center
       background-size: cover
-  &__address::before
-    background-image: url("./img/map-icon.svg")
+  &__address
+    &::before
+      background-image: url("./img/map-icon.svg")
+    &_block
+      font-size: 32px
+      margin-bottom: 40px
+      @media screen and ( max-width: 1070px )
+        font-size: 18px
+        margin-bottom: 20px
   &__tel
     transition: 0.3s
     &::before
       background-image: url("./img/tel-icon.svg")
+    &:hover
+      color: darken(#3F578B, 10)
+      text-decoration: underline
+    &:active
+      color: darken(#3F578B, 20)
+      text-decoration: underline
+  &__mail
+    transition: 0.3s
+    text-decoration: underline
     &:hover
       color: darken(#3F578B, 10)
       text-decoration: underline

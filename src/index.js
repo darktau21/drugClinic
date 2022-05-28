@@ -7,6 +7,7 @@ import Carousel from './js/carousel';
 import FullImg from './js/full-img';
 import FullComment from './js/full-comment';
 import Sldier from './js/slider';
+import test from './js/test';
 
 const Menu = new TopMenu({
   menuClass: 'js_fixed-menu',
@@ -55,6 +56,14 @@ const HelpListsAccordeon = new Accordeon({
 });
 HelpListsAccordeon.init();
 
+const FaqAccordeon = new Accordeon({
+  accordeonClass: 'faq',
+  itemSelector: '.faq__question',
+  activeClass: 'faq__item_active',
+  close: false,
+});
+FaqAccordeon.init();
+
 const FeedbackForms = new Form({
   formClass: 'feedback-form',
   telClass: 'feedback-form__input-phone',
@@ -81,3 +90,5 @@ Comments.init();
 
 const Reviews = new Sldier('reviews__container');
 Reviews.init();
+
+test();

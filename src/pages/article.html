@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Наркологическая клиника</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="main-header">
+        <div class="container">
+          <div class="border-container">
+            <nav class="main-header__menu main-menu">
+              <div class="main-menu__top-line">
+                <div class="main-menu__logo logo">
+                  <a href="#">
+                    <img src="./img/logo.svg" />
+                  </a>
+                </div>
+                <div class="main-menu__socials socials">
+                  <div class="socials__item">
+                    <a href="#" class="socials__link"
+                      ><svg
+                        class="socials__img socials__img_color-light socials__img_vk"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="48" height="48" rx="24" />
+                        <path
+                          d="M19.9076 17.8071C20.2448 17.6057 20.5539 17.3084 20.9098 17.2317C22.2961 16.9249 23.7012 16.9441 25.0968 17.1646C25.79 17.2797 26.0522 17.6153 26.0522 18.3632C26.0616 19.4851 26.0148 20.5974 26.0054 21.7192C26.0054 22.1795 25.996 22.6493 26.0803 23.1C26.1272 23.3493 26.3145 23.6657 26.5206 23.7712C26.6705 23.8479 27.017 23.6753 27.1856 23.5123C28.1598 22.6014 28.7593 21.422 29.3681 20.2522C29.6866 19.6481 29.9488 19.0152 30.2017 18.3824C30.3984 17.8934 30.6701 17.6632 31.2134 17.6728C32.4779 17.7016 33.7424 17.6536 35.0069 17.6345C35.878 17.6249 36.234 18.0468 35.8406 18.8235C35.3067 19.8782 34.651 20.8754 34.0047 21.8631C33.4895 22.6493 32.8994 23.3685 32.3748 24.1356C31.9159 24.8068 31.9721 25.1999 32.5247 25.7944C33.4052 26.7437 34.3231 27.6546 35.1755 28.6327C35.4846 28.9875 35.7282 29.4477 35.8968 29.8984C36.1028 30.4545 35.8312 30.8764 35.2505 30.9052C33.9578 30.9723 32.6559 31.0202 31.3632 30.9915C30.6514 30.9819 30.0612 30.56 29.5742 30.0518C29.0965 29.5532 28.6469 29.0162 28.1785 28.4984C28.0848 28.393 27.9818 28.2971 27.8788 28.1916C26.9796 27.3094 26.455 27.856 26.1834 28.719C26.0616 29.1025 26.0616 29.534 26.0335 29.9463C25.9773 30.6559 25.7338 30.934 25.0406 30.9244C24.0758 30.9052 23.083 30.9723 22.1556 30.7709C20.2167 30.349 18.6431 29.2176 17.3786 27.6834C15.1492 24.9794 13.5194 21.8918 12.1331 18.67C11.8428 17.9988 12.0207 17.692 12.7326 17.6728C13.8098 17.6441 14.887 17.6345 15.9642 17.6249C16.5449 17.6153 16.9008 17.9029 17.1538 18.4399C17.8094 19.8303 18.4932 21.211 19.2238 22.563C19.4393 22.9754 19.7858 23.3301 20.1324 23.637C20.5914 24.0493 21.0129 23.9246 21.1909 23.3205C21.5 22.2466 21.5093 21.1535 21.425 20.0412C21.4063 19.8303 21.3876 19.6289 21.3501 19.4275C21.2002 18.5262 21.0785 18.4016 19.9919 17.9605C19.9638 17.9125 19.9357 17.855 19.9076 17.8071Z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="socials__item">
+                    <a href="#" class="socials__link"
+                      ><svg
+                        class="socials__img socials__img_color-light"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="48" height="48" rx="24" />
+                        <path
+                          d="M17 25.3331C17 23.5383 17 21.8138 17 20.0072C18.4717 20.0072 19.9094 20.0072 21.4264 20.0072C21.4264 19.6787 21.4151 19.4089 21.4264 19.1508C21.4717 17.5084 21.3585 15.8426 21.6075 14.2354C22.083 11.1149 24.3698 9.13232 27.4717 9.015C28.966 8.95635 30.4717 9.08539 32 9.13232C32 10.7981 32 12.3467 32 13.989C31.6604 13.989 31.3321 13.989 31.0038 13.989C30.2453 14.0008 29.4981 14.0008 28.7396 14.036C27.5623 14.0946 26.8604 14.6929 26.7925 15.8895C26.7132 17.2269 26.7698 18.5759 26.7698 19.9954C28.4566 19.9954 30.1208 19.9954 31.8415 19.9954C31.6151 21.802 31.4 23.5383 31.1736 25.3097C29.7019 25.3097 28.2755 25.3097 26.7698 25.3097C26.7698 29.8966 26.7698 34.4248 26.7698 39C24.9698 39 23.2377 39 21.4264 39C21.4264 34.46 21.4264 29.9318 21.4264 25.3331C19.9208 25.3331 18.483 25.3331 17 25.3331Z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="socials__item">
+                    <a href="#" class="socials__link"
+                      ><svg
+                        class="socials__img socials__img_color-light"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="48" height="48" rx="24" />
+                        <path
+                          d="M25.2458 26.0315C23.7999 25.3276 22.7107 24.2295 21.7906 22.9343C21.8641 22.8348 21.9377 22.7388 22.0098 22.6446C22.2233 22.3659 22.4249 22.1027 22.5793 21.8081C22.692 21.5922 22.7295 21.2731 22.6544 21.0572C22.3727 20.2783 22.0535 19.518 21.6873 18.7766C21.5747 18.5513 21.2742 18.2604 21.0489 18.251C20.2414 18.2229 19.265 18.3918 18.7674 19.2552C18.1852 20.2689 18.0256 21.3576 18.4857 22.4087C18.8988 23.3379 19.4434 24.2295 20.0443 25.0554C21.4714 26.9982 23.3116 28.3966 25.6683 29.0536C26.4476 29.2695 27.2362 29.4665 28.0625 29.2976C29.3394 29.0442 30.2313 28.0681 30.3252 26.7823C30.3534 26.3694 30.2313 26.0597 29.8276 25.8719C29.3746 25.6661 28.9253 25.4529 28.475 25.2393C28.2067 25.112 27.9381 24.9845 27.6681 24.8583C27.2268 24.6612 26.8513 24.7269 26.5602 25.1399C26.4807 25.2528 26.3919 25.3601 26.3029 25.4677C26.1922 25.6015 26.0812 25.7356 25.9875 25.8813C25.7809 26.191 25.565 26.191 25.2458 26.0315Z"
+                          fill="#2770F1"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.927 34.2437C20.5794 35.0321 22.307 35.4356 24.1379 35.5107C24.4027 35.4761 24.6685 35.4467 24.9347 35.4173C25.4614 35.3591 25.9894 35.3008 26.5133 35.201C32.5692 34.0748 36.7942 28.1338 35.8741 22.0427C34.8695 15.4166 28.4756 10.921 21.9033 12.2256C14.0635 13.7836 10.045 22.2679 13.7912 29.3258C13.8945 29.5229 13.9133 29.8138 13.8475 30.0203C13.4777 31.1529 13.0968 32.2818 12.7164 33.4094C12.4884 34.0851 12.2606 34.7604 12.0355 35.4356C11.9885 35.5858 11.9791 35.8486 12.0636 35.9331C12.1481 36.0269 12.4016 36.0082 12.5612 35.9612C13.3771 35.7084 14.1913 35.4502 15.0052 35.1922C16.0645 34.8563 17.1234 34.5205 18.1853 34.1968C18.4106 34.1217 18.7204 34.1405 18.927 34.2437ZM16.5454 32.1373C16.2511 32.2295 15.9503 32.3238 15.6408 32.4229C15.7504 32.1007 15.8537 31.791 15.9542 31.4896C16.1551 30.8868 16.345 30.3175 16.5516 29.7481C16.6642 29.4384 16.6173 29.1944 16.4389 28.9222C14.1668 25.5059 14.2888 21.3857 16.7581 18.1196C20.1476 13.6146 27.0015 13.2017 30.8979 17.3125C33.3954 19.9591 34.2029 23.1126 33.048 26.5758C31.8744 30.1047 29.33 32.2071 25.6683 32.864C23.4337 33.2676 21.3212 32.8359 19.3683 31.6627C19.0209 31.4562 18.7204 31.4187 18.3543 31.5501C17.7669 31.7543 17.1708 31.9412 16.5454 32.1373Z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="socials__item">
+                    <a href="#" class="socials__link"
+                      ><svg
+                        class="socials__img socials__img_color-light"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="48" height="48" rx="24" />
+                        <path
+                          d="M22.064 26.6695C23.1616 25.6499 24.2239 24.6737 25.2863 23.6902C26.8341 22.2511 28.389 20.8193 29.9298 19.373C30.1056 19.2139 30.1971 18.9608 30.3237 18.7511C30.0212 18.5631 29.8172 18.8017 29.6061 18.9391C26.3698 21.0435 23.1334 23.155 19.9041 25.2739C19.686 25.4185 19.5031 25.4474 19.2569 25.3606C18.1241 24.9485 16.9773 24.558 15.8376 24.1602C15.8165 24.153 15.7883 24.153 15.7672 24.1385C15.3944 23.9939 15.0144 23.8131 15.0004 23.3503C14.9863 22.8947 15.3803 22.7573 15.718 22.6199C21.0298 20.4722 26.3416 18.3316 31.6535 16.1911C31.8927 16.0971 32.1459 16.0248 32.3992 16.0031C32.8284 15.967 33.0676 16.249 32.9832 16.6829C32.35 19.9877 31.7097 23.2924 31.0695 26.59C30.7811 28.0797 30.4926 29.5621 30.2041 31.0446C30.0212 31.9775 29.1981 32.2884 28.4523 31.7027C26.5175 30.184 24.5828 28.6582 22.648 27.1324C22.4791 26.995 22.2962 26.8503 22.064 26.6695Z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="main-menu__contacts">
+                  <a class="main-menu__tel" href="tel:+78001234567">8 (800) 123-45-67</a>
+                  <address class="main-menu__address">г. Богучар, ул. Мжд Киевское 17-й км</address>
+                </div>
+                <div class="main-menu__search">
+                  <button>
+                    <svg
+                      class="main-menu__search-icon"
+                      viewBox="0 0 56 56"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="56" height="56" rx="4" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M32.9531 35.7815C30.9914 37.1784 28.5917 38 26 38C19.3726 38 14 32.6274 14 26C14 19.3726 19.3726 14 26 14C32.6274 14 38 19.3726 38 26C38 28.5917 37.1784 30.9914 35.7815 32.9531L41.5874 38.759C42.3685 39.54 42.3685 40.8064 41.5874 41.5874C40.8064 42.3685 39.54 42.3685 38.759 41.5874L32.9531 35.7815ZM34 26C34 30.4183 30.4183 34 26 34C21.5817 34 18 30.4183 18 26C18 21.5817 21.5817 18 26 18C30.4183 18 34 21.5817 34 26Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <button class="main-menu__call-btn btn btn_color-blue js_open-form-btn">
+                  Срочный вызов врача
+                </button>
+                <div class="main-menu__mobile-btn js_mobile-menu-btn">
+                  <span></span>
+                </div>
+              </div>
+              <ul
+                class="menu-links menu-links_color-dark menu-links_hover main-menu__bottom-line js_fixed-menu"
+              >
+                <li class="menu-links__item menu-links__item_hover">
+                  <a href="#" class="menu-links__link menu-links__link_plus"
+                    >Наркомания <span></span
+                  ></a>
+                  <ul class="menu-links__sub-menu">
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-links__item menu-links__item_hover">
+                  <a href="#" class="menu-links__link menu-links__link_plus"
+                    >Алкоголизм <span></span
+                  ></a>
+                  <ul class="menu-links__sub-menu">
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-links__item menu-links__item_hover">
+                  <a href="#" class="menu-links__link menu-links__link_plus"
+                    >Реабилитация <span></span
+                  ></a>
+                  <ul class="menu-links__sub-menu">
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-links__item menu-links__item_hover">
+                  <a href="#" class="menu-links__link menu-links__link_plus"
+                    >Кодирование <span></span
+                  ></a>
+                  <ul class="menu-links__sub-menu">
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-links__item">
+                  <a href="#" class="menu-links__link">Цены</a>
+                </li>
+                <li class="menu-links__item menu-links__item_hover">
+                  <a href="#" class="menu-links__link menu-links__link_plus"
+                    >О клинике <span></span
+                  ></a>
+                  <ul class="menu-links__sub-menu">
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                    </li>
+                    <li class="menu-links__sub-menu-item">
+                      <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-links__item">
+                  <a href="#" class="menu-links__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <header class="article-header">
+          <div class="container">
+            <div class="border-container article-header__container">
+              <div class="breadcrumbs breadcrumbs_color-dark article-header__breadcrumbs">
+                <a href="" class="breadcrumbs__back">Назад</a>
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Пункт меню</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Внутренняя страница</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="indications">
+          <div class="container">
+            <div class="border-container indications__container">
+              <article class="indications__article article article_no-top-padding">
+                <h1 class="article__title title title_size-1 title_color-dark title_border-left">
+                  Что такое алкогольная деменция
+                </h1>
+                <div class="article__img sticker-8"><img src="./img/article.png" alt="Стоят глядят"></div>
+                <h2 class="article__title title title_size-2 title_color-dark title_border-left">
+                  Показания для обращения
+                </h2>
+                <p class="article__paragraph">
+                  Любые зависимости – патологии, при которых в психике больного происходят
+                  парадоксальные изменения. У него возникают новые нейронные связи, которые
+                  заставляют постоянно возвращаться мыслями к объекту аддикции. Объектом могут быть
+                  разные вещи: алкоголь, наркотики, табак. Встречаются и бессубстратные виды
+                  зависимости, например, шопоголизм, игромания, трудоголизм и т.д. Наиболее опасными
+                  являются химические типы зависимости, так как психоактивные вещества не только
+                  влияют на психику, но и разрушают его здоровье, поэтому при появлении тревожных
+                  симптомов нужно немедленно обратиться в наркологическую клинику.
+                </p>
+                <p
+                  class="article__paragraph article__paragraph_prepend article__paragraph_prepend-1"
+                >
+                  <b>Алкоголизм</b> – самая распространенная аддикция, при которой человек не может
+                  сопротивляться тяге к спиртным напиткам. Зависимость может развиться у людей
+                  разного социального статуса, пола, уровня дохода, характера. На первом этапе
+                  аддикции этанол может вызывать приятные ощущения, снимая напряжение и улучшая
+                  настроение. Но спустя некоторое время алкоголик не может прекратить пить сам,
+                  несмотря на то, что опьянение уже не приносит удовольствия.
+                </p>
+                <p class="article__paragraph">
+                  <b> Частная наркологическая клиника помогает алкозависимым: </b>
+                </p>
+                <ul class="article__paragraph list">
+                  <li class="list__item">Освободиться от патологической тяги</li>
+                  <li class="list__item">Осознать причины развития аддикции</li>
+                  <li class="list__item">Научиться сопротивляться срывам</li>
+                </ul>
+                <p class="article__paragraph">
+                  Для этого используются действенные процедуры: кодирование, вывод из запоя,
+                  реабилитация. Программа составляется индивидуально и гарантирует участие и
+                  поддержку врача в течение всей терапии и даже после выписки.
+                </p>
+                <p
+                  class="article__paragraph article__paragraph_prepend article__paragraph_prepend-2"
+                >
+                  <b>Наркомания</b> – термин, объединяющий любые виды зависимости от психоактивных
+                  веществ: синтетических, растительных, комбинированных, аптечных. Наркозависимые
+                  страдают от выраженной тяги к ПАВ, которая прогрессирует быстрее, чем при
+                  алкоголизме. Для излечения им нужно пройти через тщательную детоксикацию, которая
+                  выведет токсины не только из крови, но и из других тканей, кодировку и
+                  психотерапию.
+                </p>
+                <p class="article__paragraph">
+                  <b
+                    >В платных наркологических клиниках пациенты может лечиться в комфортабельном
+                    стационаре, где им предоставляют:</b
+                  >
+                </p>
+                <ul class="article__paragraph list">
+                  <li class="list__item">Возможность пройти через детокс под наркозом</li>
+                  <li class="list__item">Полную анонимность</li>
+                  <li class="list__item">
+                    Комфорт и необходимую изоляцию от провоцирующих факторов
+                  </li>
+                </ul>
+                <p class="article__paragraph">
+                  В платных медицинских центрах используется современный подход, при котором ведущая
+                  роль отдается не медикаментозному лечению, а постепенному изменению личности.
+                  Проведя год в восстановительном центре, пациент обретает силы для полного отказа
+                  от вредных привычек.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="container main-footer__container">
+          <div class="main-footer__contacts">
+            <div class="main-footer__logo logo">
+              <a href="#">
+                <img src="./img/logo-white.svg" />
+              </a>
+            </div>
+            <a href="tel:+78001234567" class="main-footer__tel">8 (800) 123-45-67</a>
+            <div class="main-footer__address-block">
+              <h3 class="main-footer__address-title">Адрес</h3>
+              <address class="main-footer__address">г. Богучар, ул. Мжд Киевское 17-й км</address>
+            </div>
+            <div class="main-footer__email-block">
+              <h3 class="main-footer__email-title">Email</h3>
+              <a href="mailto:example@example.ru" class="main-footer__email">example@example.ru</a>
+            </div>
+            <div class="main-footer__socials socials">
+              <div class="socials__item">
+                <a href="#" class="socials__link"
+                  ><svg
+                    class="socials__img socials__img_color-dark socials__img_vk"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="48" height="48" rx="24" />
+                    <path
+                      d="M19.9076 17.8071C20.2448 17.6057 20.5539 17.3084 20.9098 17.2317C22.2961 16.9249 23.7012 16.9441 25.0968 17.1646C25.79 17.2797 26.0522 17.6153 26.0522 18.3632C26.0616 19.4851 26.0148 20.5974 26.0054 21.7192C26.0054 22.1795 25.996 22.6493 26.0803 23.1C26.1272 23.3493 26.3145 23.6657 26.5206 23.7712C26.6705 23.8479 27.017 23.6753 27.1856 23.5123C28.1598 22.6014 28.7593 21.422 29.3681 20.2522C29.6866 19.6481 29.9488 19.0152 30.2017 18.3824C30.3984 17.8934 30.6701 17.6632 31.2134 17.6728C32.4779 17.7016 33.7424 17.6536 35.0069 17.6345C35.878 17.6249 36.234 18.0468 35.8406 18.8235C35.3067 19.8782 34.651 20.8754 34.0047 21.8631C33.4895 22.6493 32.8994 23.3685 32.3748 24.1356C31.9159 24.8068 31.9721 25.1999 32.5247 25.7944C33.4052 26.7437 34.3231 27.6546 35.1755 28.6327C35.4846 28.9875 35.7282 29.4477 35.8968 29.8984C36.1028 30.4545 35.8312 30.8764 35.2505 30.9052C33.9578 30.9723 32.6559 31.0202 31.3632 30.9915C30.6514 30.9819 30.0612 30.56 29.5742 30.0518C29.0965 29.5532 28.6469 29.0162 28.1785 28.4984C28.0848 28.393 27.9818 28.2971 27.8788 28.1916C26.9796 27.3094 26.455 27.856 26.1834 28.719C26.0616 29.1025 26.0616 29.534 26.0335 29.9463C25.9773 30.6559 25.7338 30.934 25.0406 30.9244C24.0758 30.9052 23.083 30.9723 22.1556 30.7709C20.2167 30.349 18.6431 29.2176 17.3786 27.6834C15.1492 24.9794 13.5194 21.8918 12.1331 18.67C11.8428 17.9988 12.0207 17.692 12.7326 17.6728C13.8098 17.6441 14.887 17.6345 15.9642 17.6249C16.5449 17.6153 16.9008 17.9029 17.1538 18.4399C17.8094 19.8303 18.4932 21.211 19.2238 22.563C19.4393 22.9754 19.7858 23.3301 20.1324 23.637C20.5914 24.0493 21.0129 23.9246 21.1909 23.3205C21.5 22.2466 21.5093 21.1535 21.425 20.0412C21.4063 19.8303 21.3876 19.6289 21.3501 19.4275C21.2002 18.5262 21.0785 18.4016 19.9919 17.9605C19.9638 17.9125 19.9357 17.855 19.9076 17.8071Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="socials__item">
+                <a href="#" class="socials__link"
+                  ><svg
+                    class="socials__img socials__img_color-dark"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="48" height="48" rx="24" />
+                    <path
+                      d="M17 25.3331C17 23.5383 17 21.8138 17 20.0072C18.4717 20.0072 19.9094 20.0072 21.4264 20.0072C21.4264 19.6787 21.4151 19.4089 21.4264 19.1508C21.4717 17.5084 21.3585 15.8426 21.6075 14.2354C22.083 11.1149 24.3698 9.13232 27.4717 9.015C28.966 8.95635 30.4717 9.08539 32 9.13232C32 10.7981 32 12.3467 32 13.989C31.6604 13.989 31.3321 13.989 31.0038 13.989C30.2453 14.0008 29.4981 14.0008 28.7396 14.036C27.5623 14.0946 26.8604 14.6929 26.7925 15.8895C26.7132 17.2269 26.7698 18.5759 26.7698 19.9954C28.4566 19.9954 30.1208 19.9954 31.8415 19.9954C31.6151 21.802 31.4 23.5383 31.1736 25.3097C29.7019 25.3097 28.2755 25.3097 26.7698 25.3097C26.7698 29.8966 26.7698 34.4248 26.7698 39C24.9698 39 23.2377 39 21.4264 39C21.4264 34.46 21.4264 29.9318 21.4264 25.3331C19.9208 25.3331 18.483 25.3331 17 25.3331Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="socials__item">
+                <a href="#" class="socials__link"
+                  ><svg
+                    class="socials__img socials__img_color-dark"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="48" height="48" rx="24" />
+                    <path
+                      d="M25.2458 26.0315C23.7999 25.3276 22.7107 24.2295 21.7906 22.9343C21.8641 22.8348 21.9377 22.7388 22.0098 22.6446C22.2233 22.3659 22.4249 22.1027 22.5793 21.8081C22.692 21.5922 22.7295 21.2731 22.6544 21.0572C22.3727 20.2783 22.0535 19.518 21.6873 18.7766C21.5747 18.5513 21.2742 18.2604 21.0489 18.251C20.2414 18.2229 19.265 18.3918 18.7674 19.2552C18.1852 20.2689 18.0256 21.3576 18.4857 22.4087C18.8988 23.3379 19.4434 24.2295 20.0443 25.0554C21.4714 26.9982 23.3116 28.3966 25.6683 29.0536C26.4476 29.2695 27.2362 29.4665 28.0625 29.2976C29.3394 29.0442 30.2313 28.0681 30.3252 26.7823C30.3534 26.3694 30.2313 26.0597 29.8276 25.8719C29.3746 25.6661 28.9253 25.4529 28.475 25.2393C28.2067 25.112 27.9381 24.9845 27.6681 24.8583C27.2268 24.6612 26.8513 24.7269 26.5602 25.1399C26.4807 25.2528 26.3919 25.3601 26.3029 25.4677C26.1922 25.6015 26.0812 25.7356 25.9875 25.8813C25.7809 26.191 25.565 26.191 25.2458 26.0315Z"
+                      fill="#2770F1"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.927 34.2437C20.5794 35.0321 22.307 35.4356 24.1379 35.5107C24.4027 35.4761 24.6685 35.4467 24.9347 35.4173C25.4614 35.3591 25.9894 35.3008 26.5133 35.201C32.5692 34.0748 36.7942 28.1338 35.8741 22.0427C34.8695 15.4166 28.4756 10.921 21.9033 12.2256C14.0635 13.7836 10.045 22.2679 13.7912 29.3258C13.8945 29.5229 13.9133 29.8138 13.8475 30.0203C13.4777 31.1529 13.0968 32.2818 12.7164 33.4094C12.4884 34.0851 12.2606 34.7604 12.0355 35.4356C11.9885 35.5858 11.9791 35.8486 12.0636 35.9331C12.1481 36.0269 12.4016 36.0082 12.5612 35.9612C13.3771 35.7084 14.1913 35.4502 15.0052 35.1922C16.0645 34.8563 17.1234 34.5205 18.1853 34.1968C18.4106 34.1217 18.7204 34.1405 18.927 34.2437ZM16.5454 32.1373C16.2511 32.2295 15.9503 32.3238 15.6408 32.4229C15.7504 32.1007 15.8537 31.791 15.9542 31.4896C16.1551 30.8868 16.345 30.3175 16.5516 29.7481C16.6642 29.4384 16.6173 29.1944 16.4389 28.9222C14.1668 25.5059 14.2888 21.3857 16.7581 18.1196C20.1476 13.6146 27.0015 13.2017 30.8979 17.3125C33.3954 19.9591 34.2029 23.1126 33.048 26.5758C31.8744 30.1047 29.33 32.2071 25.6683 32.864C23.4337 33.2676 21.3212 32.8359 19.3683 31.6627C19.0209 31.4562 18.7204 31.4187 18.3543 31.5501C17.7669 31.7543 17.1708 31.9412 16.5454 32.1373Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="socials__item">
+                <a href="#" class="socials__link"
+                  ><svg
+                    class="socials__img socials__img_color-dark"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="48" height="48" rx="24" />
+                    <path
+                      d="M22.064 26.6695C23.1616 25.6499 24.2239 24.6737 25.2863 23.6902C26.8341 22.2511 28.389 20.8193 29.9298 19.373C30.1056 19.2139 30.1971 18.9608 30.3237 18.7511C30.0212 18.5631 29.8172 18.8017 29.6061 18.9391C26.3698 21.0435 23.1334 23.155 19.9041 25.2739C19.686 25.4185 19.5031 25.4474 19.2569 25.3606C18.1241 24.9485 16.9773 24.558 15.8376 24.1602C15.8165 24.153 15.7883 24.153 15.7672 24.1385C15.3944 23.9939 15.0144 23.8131 15.0004 23.3503C14.9863 22.8947 15.3803 22.7573 15.718 22.6199C21.0298 20.4722 26.3416 18.3316 31.6535 16.1911C31.8927 16.0971 32.1459 16.0248 32.3992 16.0031C32.8284 15.967 33.0676 16.249 32.9832 16.6829C32.35 19.9877 31.7097 23.2924 31.0695 26.59C30.7811 28.0797 30.4926 29.5621 30.2041 31.0446C30.0212 31.9775 29.1981 32.2884 28.4523 31.7027C26.5175 30.184 24.5828 28.6582 22.648 27.1324C22.4791 26.995 22.2962 26.8503 22.064 26.6695Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <form
+            action="./server.php"
+            class="feedback-form feedback-form_color-light-blue main-footer__feedback-form"
+            method="post"
+          >
+            <h2 class="feedback-form__title">Получите консультацию специалиста бесплатно</h2>
+            <p class="feedback-form__desc">
+              Не нашли категорию или остались вопросы? Оставьте заявку и мы поможем вам
+            </p>
+            <div class="feedback-form__inputs">
+              <div class="feedback-form__input-container feedback-form__icon-name">
+                <input
+                  class="feedback-form__input feedback-form__input-name"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Ваше имя"
+                />
+              </div>
+              <div class="feedback-form__input-container feedback-form__icon-phone">
+                <input
+                  class="feedback-form__input feedback-form__input-phone"
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Телефон"
+                />
+              </div>
+              <button class="feedback-form__input-submit btn btn_color-dark" type="submit">
+                Оставить заявку
+              </button>
+            </div>
+            <p class="feedback-form__agreement">
+              Нажимая кнопку “Отправить заявку”, вы даете согласие на обработку
+              <a href="#">персональных данных</a>
+            </p>
+          </form>
+          <div class="main-footer__links">
+            <h3 class="main-footer__links-title">Полезные ссылки</h3>
+            <ul
+              class="menu-links menu-links_vertical menu-links_color-light js_footer-menu-accordeon"
+            >
+              <li class="menu-links__item">
+                <a href="#" class="menu-links__link menu-links__link_plus"
+                  >Наркомания <span></span
+                ></a>
+                <ul class="menu-links__sub-menu">
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-links__item">
+                <a href="#" class="menu-links__link menu-links__link_plus"
+                  >Алкоголизм <span></span
+                ></a>
+                <ul class="menu-links__sub-menu">
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-links__item">
+                <a href="#" class="menu-links__link menu-links__link_plus"
+                  >Реабилитация <span></span
+                ></a>
+                <ul class="menu-links__sub-menu">
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-links__item">
+                <a href="#" class="menu-links__link menu-links__link_plus"
+                  >Кодирование <span></span
+                ></a>
+                <ul class="menu-links__sub-menu">
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-links__item">
+                <a href="#" class="menu-links__link">Цены</a>
+              </li>
+              <li class="menu-links__item">
+                <a href="#" class="menu-links__link menu-links__link_plus"
+                  >О клинике <span></span
+                ></a>
+                <ul class="menu-links__sub-menu">
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+                  </li>
+                  <li class="menu-links__sub-menu-item">
+                    <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-links__item">
+                <a href="#" class="menu-links__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="mobile-menu js_mobile-menu">
+      <ul
+        class="menu-links menu-links_vertical menu-links_color-dark mobile-menu__links js_mobile-menu-accordeon"
+      >
+        <li class="menu-links__item">
+          <a href="#" class="menu-links__link menu-links__link_plus">Наркомания <span></span></a>
+          <ul class="menu-links__sub-menu">
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-links__item">
+          <a href="#" class="menu-links__link menu-links__link_plus">Алкоголизм <span></span></a>
+          <ul class="menu-links__sub-menu">
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-links__item">
+          <a href="#" class="menu-links__link menu-links__link_plus">Реабилитация <span></span></a>
+          <ul class="menu-links__sub-menu">
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-links__item">
+          <a href="#" class="menu-links__link menu-links__link_plus">Кодирование <span></span></a>
+          <ul class="menu-links__sub-menu">
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-links__item">
+          <a href="#" class="menu-links__link">Цены</a>
+        </li>
+        <li class="menu-links__item">
+          <a href="#" class="menu-links__link menu-links__link_plus">О клинике <span></span></a>
+          <ul class="menu-links__sub-menu">
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 1 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 2 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 3 </a>
+            </li>
+            <li class="menu-links__sub-menu-item">
+              <a class="menu-links__sub-menu-link" href="#"> Пункт 4 </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-links__item">
+          <a href="#" class="menu-links__link">Контакты</a>
+        </li>
+      </ul>
+      <button class="mobile-menu__call-btn btn btn_color-blue js_open-form-btn">
+        Срочный вызов врача
+      </button>
+      <div class="mobile-menu__socials socials">
+        <div class="socials__item">
+          <a href="#" class="socials__link"
+            ><svg
+              class="socials__img socials__img_color-light socials__img_vk"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" rx="24" />
+              <path
+                d="M19.9076 17.8071C20.2448 17.6057 20.5539 17.3084 20.9098 17.2317C22.2961 16.9249 23.7012 16.9441 25.0968 17.1646C25.79 17.2797 26.0522 17.6153 26.0522 18.3632C26.0616 19.4851 26.0148 20.5974 26.0054 21.7192C26.0054 22.1795 25.996 22.6493 26.0803 23.1C26.1272 23.3493 26.3145 23.6657 26.5206 23.7712C26.6705 23.8479 27.017 23.6753 27.1856 23.5123C28.1598 22.6014 28.7593 21.422 29.3681 20.2522C29.6866 19.6481 29.9488 19.0152 30.2017 18.3824C30.3984 17.8934 30.6701 17.6632 31.2134 17.6728C32.4779 17.7016 33.7424 17.6536 35.0069 17.6345C35.878 17.6249 36.234 18.0468 35.8406 18.8235C35.3067 19.8782 34.651 20.8754 34.0047 21.8631C33.4895 22.6493 32.8994 23.3685 32.3748 24.1356C31.9159 24.8068 31.9721 25.1999 32.5247 25.7944C33.4052 26.7437 34.3231 27.6546 35.1755 28.6327C35.4846 28.9875 35.7282 29.4477 35.8968 29.8984C36.1028 30.4545 35.8312 30.8764 35.2505 30.9052C33.9578 30.9723 32.6559 31.0202 31.3632 30.9915C30.6514 30.9819 30.0612 30.56 29.5742 30.0518C29.0965 29.5532 28.6469 29.0162 28.1785 28.4984C28.0848 28.393 27.9818 28.2971 27.8788 28.1916C26.9796 27.3094 26.455 27.856 26.1834 28.719C26.0616 29.1025 26.0616 29.534 26.0335 29.9463C25.9773 30.6559 25.7338 30.934 25.0406 30.9244C24.0758 30.9052 23.083 30.9723 22.1556 30.7709C20.2167 30.349 18.6431 29.2176 17.3786 27.6834C15.1492 24.9794 13.5194 21.8918 12.1331 18.67C11.8428 17.9988 12.0207 17.692 12.7326 17.6728C13.8098 17.6441 14.887 17.6345 15.9642 17.6249C16.5449 17.6153 16.9008 17.9029 17.1538 18.4399C17.8094 19.8303 18.4932 21.211 19.2238 22.563C19.4393 22.9754 19.7858 23.3301 20.1324 23.637C20.5914 24.0493 21.0129 23.9246 21.1909 23.3205C21.5 22.2466 21.5093 21.1535 21.425 20.0412C21.4063 19.8303 21.3876 19.6289 21.3501 19.4275C21.2002 18.5262 21.0785 18.4016 19.9919 17.9605C19.9638 17.9125 19.9357 17.855 19.9076 17.8071Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="socials__item">
+          <a href="#" class="socials__link"
+            ><svg
+              class="socials__img socials__img_color-light"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" rx="24" />
+              <path
+                d="M17 25.3331C17 23.5383 17 21.8138 17 20.0072C18.4717 20.0072 19.9094 20.0072 21.4264 20.0072C21.4264 19.6787 21.4151 19.4089 21.4264 19.1508C21.4717 17.5084 21.3585 15.8426 21.6075 14.2354C22.083 11.1149 24.3698 9.13232 27.4717 9.015C28.966 8.95635 30.4717 9.08539 32 9.13232C32 10.7981 32 12.3467 32 13.989C31.6604 13.989 31.3321 13.989 31.0038 13.989C30.2453 14.0008 29.4981 14.0008 28.7396 14.036C27.5623 14.0946 26.8604 14.6929 26.7925 15.8895C26.7132 17.2269 26.7698 18.5759 26.7698 19.9954C28.4566 19.9954 30.1208 19.9954 31.8415 19.9954C31.6151 21.802 31.4 23.5383 31.1736 25.3097C29.7019 25.3097 28.2755 25.3097 26.7698 25.3097C26.7698 29.8966 26.7698 34.4248 26.7698 39C24.9698 39 23.2377 39 21.4264 39C21.4264 34.46 21.4264 29.9318 21.4264 25.3331C19.9208 25.3331 18.483 25.3331 17 25.3331Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="socials__item">
+          <a href="#" class="socials__link"
+            ><svg
+              class="socials__img socials__img_color-light"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" rx="24" />
+              <path
+                d="M25.2458 26.0315C23.7999 25.3276 22.7107 24.2295 21.7906 22.9343C21.8641 22.8348 21.9377 22.7388 22.0098 22.6446C22.2233 22.3659 22.4249 22.1027 22.5793 21.8081C22.692 21.5922 22.7295 21.2731 22.6544 21.0572C22.3727 20.2783 22.0535 19.518 21.6873 18.7766C21.5747 18.5513 21.2742 18.2604 21.0489 18.251C20.2414 18.2229 19.265 18.3918 18.7674 19.2552C18.1852 20.2689 18.0256 21.3576 18.4857 22.4087C18.8988 23.3379 19.4434 24.2295 20.0443 25.0554C21.4714 26.9982 23.3116 28.3966 25.6683 29.0536C26.4476 29.2695 27.2362 29.4665 28.0625 29.2976C29.3394 29.0442 30.2313 28.0681 30.3252 26.7823C30.3534 26.3694 30.2313 26.0597 29.8276 25.8719C29.3746 25.6661 28.9253 25.4529 28.475 25.2393C28.2067 25.112 27.9381 24.9845 27.6681 24.8583C27.2268 24.6612 26.8513 24.7269 26.5602 25.1399C26.4807 25.2528 26.3919 25.3601 26.3029 25.4677C26.1922 25.6015 26.0812 25.7356 25.9875 25.8813C25.7809 26.191 25.565 26.191 25.2458 26.0315Z"
+                fill="#2770F1"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.927 34.2437C20.5794 35.0321 22.307 35.4356 24.1379 35.5107C24.4027 35.4761 24.6685 35.4467 24.9347 35.4173C25.4614 35.3591 25.9894 35.3008 26.5133 35.201C32.5692 34.0748 36.7942 28.1338 35.8741 22.0427C34.8695 15.4166 28.4756 10.921 21.9033 12.2256C14.0635 13.7836 10.045 22.2679 13.7912 29.3258C13.8945 29.5229 13.9133 29.8138 13.8475 30.0203C13.4777 31.1529 13.0968 32.2818 12.7164 33.4094C12.4884 34.0851 12.2606 34.7604 12.0355 35.4356C11.9885 35.5858 11.9791 35.8486 12.0636 35.9331C12.1481 36.0269 12.4016 36.0082 12.5612 35.9612C13.3771 35.7084 14.1913 35.4502 15.0052 35.1922C16.0645 34.8563 17.1234 34.5205 18.1853 34.1968C18.4106 34.1217 18.7204 34.1405 18.927 34.2437ZM16.5454 32.1373C16.2511 32.2295 15.9503 32.3238 15.6408 32.4229C15.7504 32.1007 15.8537 31.791 15.9542 31.4896C16.1551 30.8868 16.345 30.3175 16.5516 29.7481C16.6642 29.4384 16.6173 29.1944 16.4389 28.9222C14.1668 25.5059 14.2888 21.3857 16.7581 18.1196C20.1476 13.6146 27.0015 13.2017 30.8979 17.3125C33.3954 19.9591 34.2029 23.1126 33.048 26.5758C31.8744 30.1047 29.33 32.2071 25.6683 32.864C23.4337 33.2676 21.3212 32.8359 19.3683 31.6627C19.0209 31.4562 18.7204 31.4187 18.3543 31.5501C17.7669 31.7543 17.1708 31.9412 16.5454 32.1373Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="socials__item">
+          <a href="#" class="socials__link"
+            ><svg
+              class="socials__img socials__img_color-light"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" rx="24" />
+              <path
+                d="M22.064 26.6695C23.1616 25.6499 24.2239 24.6737 25.2863 23.6902C26.8341 22.2511 28.389 20.8193 29.9298 19.373C30.1056 19.2139 30.1971 18.9608 30.3237 18.7511C30.0212 18.5631 29.8172 18.8017 29.6061 18.9391C26.3698 21.0435 23.1334 23.155 19.9041 25.2739C19.686 25.4185 19.5031 25.4474 19.2569 25.3606C18.1241 24.9485 16.9773 24.558 15.8376 24.1602C15.8165 24.153 15.7883 24.153 15.7672 24.1385C15.3944 23.9939 15.0144 23.8131 15.0004 23.3503C14.9863 22.8947 15.3803 22.7573 15.718 22.6199C21.0298 20.4722 26.3416 18.3316 31.6535 16.1911C31.8927 16.0971 32.1459 16.0248 32.3992 16.0031C32.8284 15.967 33.0676 16.249 32.9832 16.6829C32.35 19.9877 31.7097 23.2924 31.0695 26.59C30.7811 28.0797 30.4926 29.5621 30.2041 31.0446C30.0212 31.9775 29.1981 32.2884 28.4523 31.7027C26.5175 30.184 24.5828 28.6582 22.648 27.1324C22.4791 26.995 22.2962 26.8503 22.064 26.6695Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="mobile-menu__contacts">
+        <a class="mobile-menu__tel" href="tel:+78001234567">8 (800) 123-45-67</a>
+        <address class="mobile-menu__address">г. Богучар, ул. Мжд Киевское 17-й км</address>
+      </div>
+    </div>
+    <div class="popup form-popup">
+      <form
+        action="./server.php"
+        class="feedback-form feedback-form_color-white feedback-form_vertical"
+        method="post"
+        id="popup-form"
+      >
+        <h2 class="feedback-form__title">Получите консультацию специалиста бесплатно</h2>
+        <p class="feedback-form__desc">
+          Не нашли категорию или остались вопросы? Оставьте заявку и мы поможем вам
+        </p>
+        <div class="feedback-form__inputs">
+          <div class="feedback-form__input-container feedback-form__icon-name">
+            <input
+              class="feedback-form__input feedback-form__input-name"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ваше имя"
+            />
+          </div>
+          <div class="feedback-form__input-container feedback-form__icon-phone">
+            <input
+              class="feedback-form__input feedback-form__input-phone"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="feedback-form__btns">
+            <button
+              class="feedback-form__close-btn btn btn_color-light js_close-popup"
+              type="button"
+            >
+              Отмена
+            </button>
+            <button
+              class="feedback-form__input-submit feedback-form__input-submit_mobile-light btn btn_color-blue"
+              type="submit"
+              name="submit"
+            >
+              Оставить заявку
+            </button>
+          </div>
+        </div>
+        <p class="feedback-form__agreement">
+          Нажимая кнопку “Отправить заявку”, вы даете согласие на обработку
+          <a href="#">персональных данных</a>
+        </p>
+      </form>
+    </div>
+    <div class="popup img-popup"></div>
+  </body>
+</html>

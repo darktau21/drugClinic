@@ -1,0 +1,5 @@
+<svg width="360" height="240" viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="240" height="120" transform="matrix(1 0 0 -1 120 240)" fill="#152F60"/>
+<path d="M0 120L120 240V120H0Z" fill="#152F60"/>
+<rect width="120" height="120" transform="matrix(1 0 0 -1 0 120)" fill="#B6D1FF"/>
+</svg>

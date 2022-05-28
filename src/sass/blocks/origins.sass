@@ -1,0 +1,51 @@
+.origins
+  background: linear-gradient(to top, rgba(#162D5F, 0.9), rgba(#162D5F, 0.9)), url("./img/origins.png")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  &__container
+    padding: 55px 14.5%
+    @media screen and ( max-width: 1070px )
+      padding: 20px 0
+  &__title
+    margin-bottom: 50px
+  &__list
+    padding-left: 30px
+    @media screen and ( max-width: 1070px )
+      padding-left: 10px
+  &__item
+    color: #ffffff
+    position: relative
+    padding-left: 60px
+    margin-bottom: 16px
+    @media screen and ( max-width: 1070px )
+      padding-left: 40px
+    &::before
+      background-color: #ffffff
+      color: #1B315F
+      border-radius: 4px
+      font-weight: 800
+      width: 24px
+      height: 24px
+      display: block
+      position: absolute
+      vertical-align: middle
+      text-align: center
+      top: 0
+      left: 30px
+      @media screen and ( max-width: 1070px )
+        left: 10px
+    &-1::before
+      content: "1"
+    &-2::before
+      content: "2"
+    &-3::before
+      content: "3"
+    &-4::before
+      content: "4"
+    &-5::before
+      content: "5"
+    &-6::before
+      content: "6"
+    &-7::before
+      content: "7"

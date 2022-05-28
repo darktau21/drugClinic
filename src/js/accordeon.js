@@ -1,7 +1,9 @@
 export default class Accordeon {
   constructor({ accordeonClass, itemSelector, activeClass, close }) {
     this.container = document.querySelector(`.${accordeonClass}`);
-    this.items = this.container.querySelectorAll(itemSelector);
+    try {
+      this.items = this.container.querySelectorAll(itemSelector);
+    } catch (e) {}
     this.activeClass = activeClass;
     this.close = close;
   }

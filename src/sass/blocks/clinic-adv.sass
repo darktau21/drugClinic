@@ -1,0 +1,26 @@
+.clinic-adv
+  &__container
+    display: flex
+    padding: 50px 0
+    padding-bottom: 0
+    @media screen and ( max-width: 1070px )
+      flex-direction: column
+  &__photo
+    flex: 1 1 30%
+    & img
+      width: 100%
+      height: auto
+      border-radius: 50% 50% 50% 0
+    @media screen and ( max-width: 1070px )
+      margin-bottom: 20px
+  &__photo-desc
+    color: #1B315F
+    font-size: 22px
+    text-align: center
+    padding-top: 16px
+  &__article
+    flex: 3 1 60%
+  &__article-title
+    padding-left: 30px
+    @media screen and ( max-width: 1070px )
+      padding-left: 0
