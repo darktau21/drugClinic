@@ -70,6 +70,13 @@
       display: flex
       gap: 5px
       flex-wrap: wrap
+    &_doctors
+      display: flex
+      gap: 15px
+      flex-wrap: wrap
+      justify-content: space-between
+      @media screen and ( max-width: 1070px )
+        flex-direction: column
   &__item
     &_link
       color: #1B315F
@@ -99,3 +106,16 @@
         color: #ffffff
         &::before
           background-color: #fff
+    &_doctor
+      flex: 0 1 25%
+      @media screen and ( max-width: 1070px )
+        flex: 1 0 auto
+      & a
+        @media screen and ( max-width: 1070px )
+          flex-direction: row
+        & .card__img
+          @media screen and ( max-width: 1070px )
+            flex: 2 1 20%
+        & .card__desc
+          @media screen and ( max-width: 1070px )
+            flex: 3 1 20%
