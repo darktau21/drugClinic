@@ -1,8 +1,9 @@
 const test = () => {
-  const elem = document.querySelector('p');
+  const elem = document.querySelectorAll('p');
   console.log(elem);
-
-  elem.classList.add('class1');
-
 };
 export default test;
+
+let a = 10;
+
+console.log(`Стр ${a + 10} ока `);

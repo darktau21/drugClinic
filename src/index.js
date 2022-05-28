@@ -7,7 +7,6 @@ import Carousel from './js/carousel';
 import FullImg from './js/full-img';
 import FullComment from './js/full-comment';
 import Sldier from './js/slider';
-import test from './js/test';
 
 const Menu = new TopMenu({
   menuClass: 'js_fixed-menu',
@@ -90,5 +89,3 @@ Comments.init();
 
 const Reviews = new Sldier('reviews__container');
 Reviews.init();
-
-test();
