@@ -1,0 +1,101 @@
+.items
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  flex: 1 0 70%
+  margin-right: 5px
+  @media screen and ( max-width: 1070px )
+    margin-right: 0
+  &__panel
+    display: flex
+    align-items: center
+    gap: 15px
+    padding: 10px 0
+    & span
+      flex: 1 0 auto
+      height: 1px
+      background-color: #D7E2FF
+  &__counter
+    color: #1B315F
+    font-size: 18px
+    flex: 0 0 auto
+    & span
+      font-weight: 800
+      font-size: 32px
+      background: none
+  &__btn
+    color: #2770F1
+    font-weight: 600
+    font-size: 16px
+    cursor: pointer
+    transition: 0.3s
+    position: relative
+    background: none
+    &:hover
+      color: darken(#2770F1, 10)
+    &:active
+      color: darken(#2770F1, 10)
+    &_prev
+      padding-left: 23px
+      &::before
+        display: block
+        content: ""
+        position: absolute
+        top: 50%
+        left: 0
+        margin-top: -8px
+        width: 17px
+        height: 16px
+        background-image: url("./img/left-blue-arrow.svg")
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+    &_next
+      padding-right: 23px
+      &::before
+        display: block
+        content: ""
+        position: absolute
+        top: 50%
+        right: 0
+        margin-top: -8px
+        width: 17px
+        height: 16px
+        background-image: url("./img/right-blue-arrow.svg")
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+  &__list
+    &_links
+      display: flex
+      gap: 5px
+      flex-wrap: wrap
+  &__item
+    &_link
+      color: #1B315F
+      font-size: 18px
+      font-weight: 700
+      padding: 16px
+      flex: 1 0 40%
+      background-color: #F1F5FF
+      border-radius: 4px
+      position: relative
+      padding-left: 35px
+      cursor: pointer
+      transition: 0.3s
+      &::before
+        width: 8px
+        height: 8px
+        content: ""
+        display: block
+        position: absolute
+        left: 15px
+        top: 50%
+        margin-top: -4px
+        background-color: #2770F1
+        border-radius: 50%
+      &:hover
+        background-color: #2770F1
+        color: #ffffff
+        &::before
+          background-color: #fff

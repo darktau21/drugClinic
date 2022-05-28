@@ -1,0 +1,27 @@
+.filter
+  flex: 0 0 25%
+  @media screen and ( max-width: 1070px )
+    display: none
+  &__title
+    padding-left: 30px
+    padding-bottom: 15px
+    border-bottom: 1px solid #D7E2FF
+    @media screen and ( max-width: 1070px )
+      padding-left: 15px
+  &__list
+    padding: 8px
+    padding-left: 50px
+    list-style: disc
+    @media screen and ( max-width: 1070px )
+      padding-left: 15px
+  &__item
+    padding: 8px 0
+    cursor: pointer
+    list-style: inherit
+    transition: 0.3s
+    &::marker
+      color: #D7E2FF
+    &:hover
+      color: #2770F1
+    &_active::marker
+      color: #2770F1
