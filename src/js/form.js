@@ -1,7 +1,6 @@
 export default class Form {
-  constructor({ formClass, telClass, postTo, submitBtn, loadingClass }) {
+  constructor({ formClass, postTo, submitBtn, loadingClass }) {
     this.forms = document.querySelectorAll(`.${formClass}`);
-    this.telInputs = document.querySelectorAll(`.${telClass}`);
     this.postTo = postTo;
     this.submitBtn = submitBtn;
     this.loadingClass = loadingClass;
@@ -30,7 +29,7 @@ export default class Form {
           const formData = new FormData(form);
           this.postData(formData)
             .then((res) => {
-              console.log(res);
+              console.log(res.text());
               if (!res.ok) {
                 throw new Error('Ошибка сервера!');
               }

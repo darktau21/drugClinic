@@ -65,7 +65,6 @@ FaqAccordeon.init();
 
 const FeedbackForms = new Form({
   formClass: 'feedback-form',
-  telClass: 'feedback-form__input-phone',
   postTo: './server.php',
   submitBtn: 'feedback-form__input-submit',
   loadingClass: 'feedback-form__input-submit_loading'

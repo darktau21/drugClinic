@@ -5,7 +5,7 @@ export default class Sldier {
     this.inner = this.container.querySelector('.slider-inner');
     try {
       this.scrollVal = this.wrapper.clientWidth;
-      this.slidesCount = this.slidesCount = Math.round(this.wrapper.scrollWidth / this.scrollVal);
+      this.slidesCount = Math.round(this.wrapper.scrollWidth / this.scrollVal);
     } catch (e) {}
     this.currentSlide = 0;
     this.prevBtn = this.container.querySelector('.slider-btn-prev');

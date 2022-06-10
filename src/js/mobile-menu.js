@@ -2,8 +2,6 @@ export default class MobileMenu {
   constructor({btnClass, menuClass, btnActiveClass, menuActiveClass}) {
     this.btn = document.querySelector(`.${btnClass}`);
     this.menu = document.querySelector(`.${menuClass}`);
-    this.btnClass = btnClass;
-    this.menuClass = menuClass;
     this.btnActiveClass = btnActiveClass;
     this.menuActiveClass = menuActiveClass;
   }

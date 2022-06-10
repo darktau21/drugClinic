@@ -15,8 +15,8 @@ const webpack = require('webpack-stream');
 
 // Paths
 const source = './src';
-// const dist = './dist';
-const dist = 'C:\\openserver\\domains\\drugclinic.ru';
+const dist = './dist';
+// const dist = 'C:\\openserver\\domains\\drugclinic.ru';
 
 // NODE_ENV mode
 let devMode;
